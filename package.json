@@ -1,7 +1,7 @@
 {
-  "name": "savage-thumbsdown",
+  "name": "express-mongo-app",
   "version": "1.0.0",
-  "description": "![21 Savage](public/21savage.jpg)",
+  "description": "![Book Directory](public/21savage.jpg)",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
