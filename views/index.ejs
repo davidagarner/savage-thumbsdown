@@ -3,46 +3,54 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Quiz</title>
+  <title>Book Directory</title>
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="stylesheet" href="font-awesome.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
-  <h1>Books</h1>
+<body class="check">
+  <h1> <img src="../img/library.jpeg" alt=""> Book Directory <img src="../img/library.jpeg" alt="">  </h1>
   <!-- <h2>Book Directory</h2> -->
+  <section class="middleSec">
+    <h2>Add a book and Review</h2>
 
+    <form action="/books" method="POST">
+      <input type="text" placeholder="Author of Book" name="author">
+      <input type="text" placeholder="Title of Book" name="title">
+      <button type="submit">Submit</button>
+    </form>
 
-  <h3>Book Directory</h3>
-  <ul class="books">
-    <% for(var i=0; i<books.length; i++) {%>
-    <li class="book">
-      <span class="author"><%= books[i].author %></span>
-      <span class="title"><%= books[i].title %></span>
-      <span class="hidden"><%= books[i].review %></span>
-      <span class="savedReview"><%= phrases[books[i].review]%></span>
-      <select name="reviews" id="reviews">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-      </select>
-      <button class="reviewButton">Submit Review</button>
+    <!-- <h3>Book Directory</h3> -->
+    <ul class="books">
+      <% for(var i=0; i<books.length; i++) {%>
+      <li class="book">
+        <span class="author"><%= books[i].author %></span>
+        <span class="title"><%= books[i].title %></span>
+        <span class="hidden"><%= books[i].review %></span>
+        <span class="savedReview"><%= phrases[books[i].review]%></span>
+        <select name="reviews" id="reviews">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <button class="reviewButton">Submit Review</button>
 
-      <span><i class="fa fa-trash" aria-hidden="true"></i></span>
-    </li>
-    <% } %>
-  </ul>
+        <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+      </li>
+      <% } %>
+    </ul>
+  </section>
 
-  <h2>Add a message</h2>
+  <!-- <h2>Add a book and Review</h2>
 
   <form action="/books" method="POST">
     <input type="text" placeholder="Author of Book" name="author">
     <input type="text" placeholder="Title of Book" name="title">
     <button type="submit">Submit</button>
-  </form>
+  </form> -->
 
   <script src="main.js"></script>
 
